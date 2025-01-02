@@ -9303,6 +9303,14 @@ a.text-warning:hover, a.text-warning:focus {
   color: #ba8b00 !important;
 }
 
+.text-groom {
+  color: #deb887 !important;
+}
+
+.text-bride {
+  color: #dc3545 !important;
+}
+
 .text-danger {
   color: #dc3545 !important;
 }
