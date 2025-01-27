@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
     margin: 0;
@@ -12,39 +13,26 @@ body {
     background: linear-gradient(to bottom, #3a0057, #7a3aab);
     color: #FFFFFF;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll during animation */
 }
 
-h1, h2, h3 {
-    font-weight: 600;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Hero Section Tumble Animation */
-@keyframes tumbleIn {
+/* Scattered Words Animation */
+@keyframes scattered {
     0% {
         opacity: 0;
-        transform: rotateX(90deg) rotateY(0deg) scale(0.5);
+        transform: translateX(calc(var(--scatter-x, 0) * 200px)) translateY(calc(var(--scatter-y, 0) * 200px)) scale(0.5);
     }
-    50% {
-        opacity: 0.5;
-        transform: rotateX(45deg) rotateY(45deg) scale(1.1);
+    80% {
+        opacity: 1;
+        transform: translateX(calc(var(--scatter-x, 0) * 20px)) translateY(calc(var(--scatter-y, 0) * 20px)) scale(1.1);
     }
     100% {
         opacity: 1;
-        transform: rotateX(0deg) rotateY(0deg) scale(1);
+        transform: translateX(0) translateY(0) scale(1);
     }
 }
 
-.hero-content {
-    opacity: 0;
-    animation: tumbleIn 1.8s ease-out forwards;
-    animation-delay: 0.2s;
-}
-
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -55,24 +43,66 @@ a {
     padding: 0 20px;
     background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     color: #ffffff;
+    overflow: hidden;
 }
 
-.hero h1 {
-    font-size: 4em;
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    animation: scattered 5.4s ease-out forwards;
+}
+
+/* Timings for Scattered Words */
+.hero-content h1 span {
+    animation-delay: calc(var(--index) * 0.2s);
+    --scatter-x: calc(1 - 2 * var(--index) % 2); /* Alternate directions */
+    --scatter-y: calc(1 - 2 * var(--index + 1) % 2); /* Randomize Y-axis */
+}
+
+.hero-content h2 span {
+    animation-delay: calc(1s + var(--index) * 0.15s);
+    --scatter-x: calc(1 - 2 * var(--index) % 2);
+    --scatter-y: calc(-1 + 2 * var(--index + 2) % 2);
+}
+
+.hero-content p span {
+    animation-delay: calc(2s + var(--index) * 0.1s);
+    --scatter-x: calc(1 - 2 * var(--index) % 2);
+    --scatter-y: calc(-1 + 2 * var(--index + 1) % 2);
+}
+
+/* Style Adjustments */
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
     font-weight: bold;
-    margin-bottom: 0.3em;
+    text-transform: uppercase;
 }
 
-.hero h2 {
-    font-size: 2.2em;
-    margin: 0.5em 0;
+.hero-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
     color: #F8E1F4;
 }
 
-.hero .date, .hero .hashtag {
-    font-size: 1.3em;
-    font-weight: 500;
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
 }
+
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* Countdown Clock Digital Animation */
 #countdown span {
@@ -82,8 +112,8 @@ a {
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 2.5em;
-    animation: pulse 1s infinite alternate;
-    transition: all 0.2s ease-in-out;
+    animation: pulse 3s infinite alternate;
+    transition: all 0.6s ease-in-out;
 }
 
 @keyframes pulse {
@@ -247,3 +277,4 @@ blockquote {
         font-size: 2em;
     }
 }
+
