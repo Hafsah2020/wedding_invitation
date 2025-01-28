@@ -159,13 +159,13 @@ body {
 }
 
 .event-details h2 {
-    color: #d08498;
+    color: #fdf4f7;
     margin-bottom: 15px;
     font-size: 2em;
 }
 
 .event-details h3 {
-    color: #d08498;
+    color: #fdf4f7;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -203,7 +203,7 @@ body {
 }
 
 .rsvp h2 {
-    color: #d08498;
+    color: #fdf4f7;
     margin-bottom: 20px;
     font-size: 2em;
 }
@@ -225,7 +225,7 @@ body {
 }
 
 .rsvp-item h3 {
-    color: #d08498;
+    color: #fdf4f7;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -303,6 +303,7 @@ body {
 /* Gift Items Section */
 .gift-section {
     padding: 30px 20px;
+    color: #FFFFFF;
     background: rgba(255, 255, 255, 0.15);
     margin: 20px;
     border-radius: 12px;
@@ -323,6 +324,7 @@ body {
 
 .gift-item {
     background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -343,25 +345,26 @@ body {
 
 .gift-section .btn {
     display: inline-block;
-    background: #5A006B;
-    color: white;
     padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+    color: #e04e7c;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .gift-item .btn:hover {
-    background: #440053;
+    background: #FFFFFF;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
-    background: #3a0057;
-    color: #FFFFFF;
+    background: #fdf2f6;
+    color: #d32d55;
     font-size: 0.9em;
     border-radius: 10px;
     margin-top: 30px;
