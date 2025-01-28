@@ -22,5 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
     quotes[0].classList.add("active");
     adjustHeight(); // Ensure correct initial height
 
-    setInterval(showNextQuote, 5000); // Change verse every 5 seconds
+    setInterval(showNextQuote, 2000); // Change verse every 2 seconds
 });

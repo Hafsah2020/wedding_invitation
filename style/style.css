@@ -9,8 +9,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #3a0057, #7a3aab);
-    color: #FFFFFF;
+    background: linear-gradient(to bottom, #fdf2f6, #d32d55);
+    color: #d32d55;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -25,7 +25,7 @@ body {
     height: 100vh;
     padding: 0 20px;
     background: rgba(0, 0, 0, 0); /* Dark overlay */
-    color: #FFFFFF;
+    color: #c7355e;
     overflow: hidden;
 }
 
@@ -82,14 +82,15 @@ body {
 .hero-content p {
     font-size: 1.2em;
     margin-bottom: 0.2em;
+    color: #c7355e;
 }
 
 /* Hashtag Styling */
 .hero-content .hashtag span {
     font-size: 1.5em;
     font-weight: bold;
-    color: #FFD1E9; /* Soft pink */
-    background: linear-gradient(90deg, #FFC1E3, #FF89D9); /* Gradient background */
+    color: #FFFFFF; /* Soft pink */
+    background: #d32d55; /* Gradient background */
     padding: 5px 15px;
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -99,13 +100,13 @@ body {
 /* Pulse Glow Animation */
 @keyframes pulseGlow {
     0% {
-        box-shadow: 0px 0px 10px rgba(255, 137, 217, 0.5);
+        box-shadow: 0px 0px 10px rgba(211, 45, 85, 0.5);
     }
     50% {
-        box-shadow: 0px 0px 20px rgba(255, 137, 217, 1);
+        box-shadow: 0px 0px 20px rgba(211, 45, 85, 1);
     }
     100% {
-        box-shadow: 0px 0px 10px rgba(255, 137, 217, 0.5);
+        box-shadow: 0px 0px 10px rgba(211, 45, 85, 0.5);
     }
 }
 
@@ -158,20 +159,20 @@ body {
 }
 
 .event-details h2 {
-    color: #FBE8F1;
+    color: #d08498;
     margin-bottom: 15px;
     font-size: 2em;
 }
 
 .event-details h3 {
-    color: #FFC2E0;
-    font-size: 2.0em;
+    color: #d08498;
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 .event-details p {
-    color: #FFFFFF;
-    font-size: 1.5em;
+    color: #0c0809;
+    font-size: 1.3em;
     margin-bottom: 10px;
 }
 
@@ -179,7 +180,7 @@ body {
     display: inline-block;
     padding: 10px 15px;
     color: #FFFFFF;
-    background-color: #5A006B;
+    background-color: #e04e7c;
     text-align: center;
     border-radius: 8px;
     margin-top: 10px;
@@ -188,7 +189,7 @@ body {
 }
 
 .event-details a.button:hover {
-    background-color: #440053;
+    background-color: #e04e7c;
 }
 
 /* RSVP Section */
@@ -202,7 +203,7 @@ body {
 }
 
 .rsvp h2 {
-    color: #FBE8F1;
+    color: #d08498;
     margin-bottom: 20px;
     font-size: 2em;
 }
@@ -224,14 +225,14 @@ body {
 }
 
 .rsvp-item h3 {
-    color: #FFC2E0;
+    color: #d08498;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .rsvp-item p {
     font-size: 1.2em;
-    color: #FBE8F1;
+    color: #0c0809;
 }
 
 
@@ -272,7 +273,7 @@ body {
 .carousel-track blockquote {
     font-size: 1.3em;
     font-style: italic;
-    color: #FFD6E6;
+    color: #d32d55;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
