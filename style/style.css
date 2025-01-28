@@ -24,7 +24,7 @@ body {
     text-align: center;
     height: 100vh;
     padding: 0 20px;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0); /* Dark overlay */
     color: #FFFFFF;
     overflow: hidden;
 }
@@ -93,7 +93,7 @@ body {
     padding: 5px 15px;
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    animation: pulseGlow 1.5s infinite ease-in-out; /* Glowing pulse effect */
+    animation: pulseGlow 0.5s infinite ease-in-out; /* Glowing pulse effect */
 }
 
 /* Pulse Glow Animation */
@@ -112,7 +112,7 @@ body {
 /* Countdown Section */
 .countdown-section {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin: 20px 10px;
@@ -137,10 +137,10 @@ body {
 /* Pulse Effect */
 @keyframes pulse {
     from {
-        transform: scale(1);
+        transform: scale(0.5);
     }
     to {
-        transform: scale(1.1);
+        transform: scale(0.8);
     }
 }
 
@@ -165,13 +165,13 @@ body {
 
 .event-details h3 {
     color: #FFC2E0;
-    font-size: 1.5em;
+    font-size: 2.0em;
     margin-bottom: 10px;
 }
 
 .event-details p {
     color: #FFFFFF;
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
