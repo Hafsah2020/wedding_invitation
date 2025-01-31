@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function fetchAvailableGifts() {
     try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbx2_zXQVA_QTrjUOMuVVcQbUMQbaiVv33g8FEDnscCl7Go5f2j2gQOlgsRzplASLcRE/exec"); // Replace with your Web App URL
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwumi1Qd5D--BJB1GWnfrtb25vMwLjAjHws1pBchgknxcMIxThTEk1muQbQTSC1H_0v/exec"); // Replace with your Web App URL
         const data = await response.json();
         const giftList = document.getElementById("gift-list");
         giftList.innerHTML = ""; // Clear current items
