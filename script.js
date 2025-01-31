@@ -25,22 +25,29 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextQuote, 2000); // Change verse every 2 seconds
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const sheetAPI = "https://script.google.com/macros/s/AKfycbx2_zXQVA_QTrjUOMuVVcQbUMQbaiVv33g8FEDnscCl7Go5f2j2gQOlgsRzplASLcRE/exec"; // Replace with your actual script URL
+async function fetchAvailableGifts() {
+    try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbx2_zXQVA_QTrjUOMuVVcQbUMQbaiVv33g8FEDnscCl7Go5f2j2gQOlgsRzplASLcRE/exec"); // Replace with your Web App URL
+        const data = await response.json();
+        const giftList = document.getElementById("gift-list");
+        giftList.innerHTML = ""; // Clear current items
 
-    fetch(sheetAPI)
-        .then(response => response.json())
-        .then(data => {
-            const purchasedItems = data.purchasedItems;
-            const giftItems = document.querySelectorAll(".gift-item");
+        data.availableGifts.forEach(gift => {
+            let giftItem = document.createElement("div");
+            giftItem.classList.add("gift-item");
+            giftItem.innerHTML = `
+                <img src="${gift.image}" alt="${gift.name}">
+                <p>${gift.name}</p>
+                <p>Tag: ${gift.tag}</p>
+                <a href="${gift.link}" class="btn">Buy Now</a>
+            `;
+            giftList.appendChild(giftItem);
+        });
+    } catch (error) {
+        console.error("Error fetching gift list:", error);
+    }
+}
 
-            giftItems.forEach(item => {
-                const giftName = item.getAttribute("data-gift");
-                if (purchasedItems.includes(giftName)) {
-                    item.style.display = "none"; // Hide purchased gifts
-                }
-            });
-        })
-        .catch(error => console.error("Error fetching data:", error));
-});
-
+// Fetch available gifts when the page loads
+window.onload = fetchAvailableGifts;
+  
